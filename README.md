@@ -6,25 +6,15 @@ on Wikipedia, here:
 
   http://en.wikipedia.org/wiki/List_of_colors
 
-The script used is (poorly) written in Python and depends heavily on the
-input format as was copied and pasted from Wikipedia using Firefox into a
-plain text file. The script is named `format-colors` and can be found in the
-same directory as the data files. Run it at your own discretion.
+The script used is written in Python and depends heavily on the
+input format from Wikipedia. The script is named `format-colors` and can be found in the
+same directory as the data files.
 
 There's a GNU Make file called `makefile` that just re-generates the data
 files when the input file is updated or the script is changed. You probably
 don't need this file at all.
 
 There are various output formats, explained below.
-
-Note: some of the information in the output files is redundant, ex. the
-identifier name can be found from the regular name and the RGB integer
-triplet is provided also by the hex HTML RGB triplet. The reason is I needed
-this in a specific format for a project. It should be trivial to remove this
-information if it is redundant for you.
-
-Note: If you're using these files for something automated/scripted, please
-put them on your own server so you don't pound mine.
 
 C Code
 ------
@@ -59,8 +49,6 @@ printf("Color Hex: %s\n", clrinf->hex);
 printf("Color RGB: (%d, %d, %d)\n",
   clrinf->rgb.r, clrinf->rgb.g, clrinf->rgb.b);
 ```
-
-Look at the code for more details.
 
 Conf
 ----
